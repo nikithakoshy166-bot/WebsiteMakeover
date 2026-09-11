@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Website Makeover",
+  "version": "6.0",
+  "description": "Customize the appearance of any website.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
